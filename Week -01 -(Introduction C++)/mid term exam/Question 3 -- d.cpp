@@ -16,8 +16,7 @@ class Person
 };
 int main()
 {
-   // char name [150]="barkat Ullah";
-  //  char name [150]="iqbL HOSEN";
+
     Person* barkat=new Person(45,4.5,"barkat ullah");
     Person* iqbal=new Person(90,5.8,"iqbal hossain");
     cout<<barkat->name<<endl;
