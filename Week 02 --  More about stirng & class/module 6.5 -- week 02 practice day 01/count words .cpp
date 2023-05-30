@@ -7,8 +7,10 @@ int main()
     stringstream dd;
     dd << s;
     string word;
+    int cnt=0;
     while (dd>>word)
     {
-        cout << word << endl;
+        cnt ++;
     }
+    cout <<cnt << endl;
 }
