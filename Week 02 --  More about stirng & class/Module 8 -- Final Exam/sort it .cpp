@@ -14,9 +14,13 @@ bool compare(Student a,Student b)
 {
     if (a.math_marks + a.eng_marks == b.math_marks+a.eng_marks)
     {
-        a.id >b.id;
+ // return  a.id > b.id;
+      return a.math_marks + a.eng_marks > b.math_marks+b.eng_marks;
+
     }
-    else  a.math_marks + a.eng_marks < b.math_marks+b.eng_marks;
+
+      return  a.id < b.id;
+    //return a.math_marks + a.eng_marks < b.math_marks+b.eng_marks;
 }
 int main()
 {
@@ -32,6 +36,7 @@ int main()
         cin>>obj[i].math_marks;
         cin>>obj[i]. eng_marks;
     }
+    cout << endl;
 sort (obj,obj+n,compare);
     for (int i=0;i<n;i++)
     {
