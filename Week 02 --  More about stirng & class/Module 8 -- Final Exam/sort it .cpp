@@ -12,15 +12,15 @@ class Student
 };
 bool compare(Student a,Student b)
 {
-    if (a.math_marks + a.eng_marks == b.math_marks+a.eng_marks)
+   // if (a.id==b.id)
+    if (a.math_marks + a.eng_marks == b.math_marks+b.eng_marks)
     {
- // return  a.id > b.id;
-      return a.math_marks + a.eng_marks > b.math_marks+b.eng_marks;
+ return  a.id < b.id;
+     // return a.math_marks + a.eng_marks > b.math_marks+b.eng_marks;
 
     }
-
-      return  a.id < b.id;
-    //return a.math_marks + a.eng_marks < b.math_marks+b.eng_marks;
+//else return  a.id < b.id;
+     return a.math_marks + a.eng_marks > b.math_marks+b.eng_marks;
 }
 int main()
 {
@@ -32,14 +32,15 @@ int main()
         cin >> obj[i].name ;
         cin >>obj[i].Classs;
         cin>> obj[i].section;
-        cin>> obj[i] .id ;
+        cin>> obj[i].id ;
         cin>>obj[i].math_marks;
-        cin>>obj[i]. eng_marks;
+        cin>>obj[i].eng_marks;
     }
-    cout << endl;
+
 sort (obj,obj+n,compare);
     for (int i=0;i<n;i++)
     {
-        cout <<obj[i].name << " "<<obj[i].Classs<< " "<<obj[i].section<<"  "<<obj[i].id<<" "<<obj[i].math_marks<< " "<<obj[i]. eng_marks<<endl;
+        cout <<obj[i].name << " "<<obj[i].Classs<< " "<<obj[i].section<<" "<<obj[i].id<<" "<<obj[i].math_marks<< " "<<obj[i].eng_marks<<endl;
     }
 }
+
