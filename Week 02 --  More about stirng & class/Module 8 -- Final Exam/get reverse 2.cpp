@@ -5,31 +5,31 @@ class Student
 public:
     string name ;
     int classs ;
-    char se ;
+    char sec;
     int id;
 };
-/*bool compare (Student x,Student y)
-{
-    if (x.id<y.id) return true ;
-    else return false ;
-}*/
+
 int main()
 {
-    int n,trmp,j,i;
+    int n;
+    cin >>n;
     Student a[n];
+    for (int i=0;i<n;i++)
+    {
+   cin>>a[i].name>>a[i].classs>>a[i].sec>>a[i].id;
+    }
+ int   i=0,j=n-1;
+    while (i<j)
+    {
+        int   tmp =a[i].id;
+        a[i].id=a[j].id;
+        a[j].id=tmp;
+        i++;
+        j--;
+    }
     for (int i=0; i<n; i++)
     {
-        cin >>a[i].name;
-        cin>>a[i].classs;
-        cin>>a[i].se;
-        cin>>a[i].id;
-    }
-//  reverse (begin (a[i].id),end (a.[i].id))
-    // sort (a,a+3,compare);
-    for (int i=0; i<n; i++)
+           cout<<a[i].name<<" "<<a[i].classs<<" "<<a[i].sec<<" "<<a[i].id<<endl;
 
-    {
-        swap(a[i],a[j])     ;
     }
-    cout << a[i];
 }
